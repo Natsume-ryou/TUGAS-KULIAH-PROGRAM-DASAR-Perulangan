@@ -1,0 +1,114 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+
+	int cacah,genap,gasal,n,p,fibo1=1,fibo2=0;
+	char lanjut='y';
+	int opsi;
+	
+	while(lanjut=='y')
+	{
+		cout<<"========PROGRAM BILANGAN========"<<endl;
+		
+		cout<<"1. Bilangan Fibonanci "<<endl;
+		cout<<"2. Bilangan Gasal"<<endl;
+		cout<<"3. Bilangan Genap"<<endl;
+		cout<<"4. Bilangan Cacah"<<endl;
+		cout<<endl;
+		
+		cout<<"Masukan pilihan kamu :"; cin>>opsi;
+		
+			system("cls");
+			switch (int (opsi))
+			{
+				case (1) :
+					{
+						cout<<"1. Bilangan Fibonanci"<<endl;
+							
+						cout<<"Masukan batas akhir yang diperlukan :";	cin>>n;
+					
+							for(p=1;p<n;++p)
+								{
+									p=fibo1+fibo2;
+									fibo2=fibo1;
+									fibo1=p;
+									cout<<"Nilai Bil.Fibonanci yang diminta :"<<p<<"\n";
+								}
+						break;
+					}
+					
+					
+					case (2)	:
+					{
+						cout<<"2. Bilangan Gasal"<<endl;
+						
+						cout<<"Masukan batas akhir yang diperlukan :"; cin>>n;
+						
+							for (p=1;p<=n;++p)
+								{
+									if(p%2!=0)
+									cout<<"Nilai Bil.Gasal yang diminta :"<<p<<"\n";
+								}
+							break;
+					}
+					
+					
+					case (3)	:
+					{
+						cout<<"3. Bilangan Genap"<<endl;
+						
+						cout<<"Masukan batas akhir yang diperlukan :"; cin>>n;
+						
+							for (p=1;p<=n;++p)
+								{
+									if(p%2==0)
+									cout<<"Nilai Bil.Genap yang diminta :"<<p<<"\n";
+								}
+							break;
+					}
+					
+					
+					case (4)	:
+					{
+						cout<<"4. Bilangan Cacah"<<endl;
+						
+						cout<<"Masukan batas akhir yang diperlukan :"; cin>>n;
+						
+							for(p=1;p<=n;++p)
+								{
+									cout<<"Nilai Bil.Cacah yang diminta :"<<p<<"\n";
+								}
+							break;
+					}
+						
+					default :
+           			{
+               			 cout<<"Maaf anda melakukan kesalahan!!!!"<<endl;
+          			}	
+						
+						
+				}
+					
+				cout<<"Ingin menghitung lagi (y/n)? ";
+    			cin >>lanjut;
+    			cout<<endl;
+    		}
+    			
+
+	}
+	
+
+					
+					
+					
+				
+	
+	
+	
+	
+	
+	
+

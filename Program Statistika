@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n ;
+    float nilai,max,min,jml,average;
+    char ulang='y';
+    while(ulang == 'y'){
+    cout<<"=============================\n";
+    cout<<"-----Program Statistika------\n";
+    cout<<"=============================\n";
+    cout<<" Masukkan banyak data : ";
+    cin >> n;
+    for(int i=1; i<=n; i++){
+        cout<<"[+] Masukan bilangan ke- "<<i<<" = ";
+        cin >> nilai;
+        cout<<endl;
+        if(i==1){
+            max = nilai;
+            min = nilai;
+        }else if(nilai<min){
+            min = nilai;
+        }else if(nilai>max){
+            max = nilai;
+        }
+        jml=jml+nilai;
+    }
+    average=jml/n;
+    cout<<"---- HASIL PERHITUNGAN ----\n";
+    cout<<"Nilai Maksimal     : "<<max<<endl;
+    cout<<"Nilai Minimal      : "<<min<<endl;
+    cout<<"Nilai Rata-rata    : "<<average<<endl;
+    cout<<"Jumlah keselurahan : "<<jml<<"\n\n";
+    cout<<"Ingin menghitung lagi (y/n)? ";
+    cin >>ulang;
+    cout<<endl;
+    }
+
+
+}

@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+	cout<<"______________________________________________"<<endl;
+	cout<<"PROGRAM MENCARI BILANGAN TERBESAR DAN TERKECIL"<<endl;
+	cout<<"______________________________________________"<<endl;
+	
+	cout << "Jumlah bilangan yang akan diinput: ";
+	int jumlah, terbesar, terkecil;
+	cin >> jumlah;
+
+   // Mendata nilai bilangan
+
+	int bil[jumlah];
+	int i = -1;
+
+	while(++i < jumlah) {
+       cout << "Masukan nilai bilangan ke-" << (i + 1) << " : ";
+       cin >> bil[i];
+
+   }
+
+   // Mencari Nilai Terbesar dan Terkecil
+
+	int n = -1;
+	terbesar = bil[0];
+	terkecil = bil[0];
+    while(++n < jumlah) {
+
+       if(bil[n] > terbesar) {
+           terbesar = bil[n];
+       }
+
+       if(bil[n] < terkecil) {
+           terkecil = bil[n];
+       }
+   }
+
+	cout << "Bilangan terbesar adalah " << terbesar << "\n";
+	cout << "Bilangan terkecil adalah " << terkecil;
+    
+
+  	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,113 @@
+#include <iostream>
+
+using namespace std;
+int main ()
+
+{
+int a,i,b,c,x,p;
+int opsi;
+char ulang='y' ;
+	while (ulang=='y')
+	{
+
+
+	cout<<"==========================="<<endl;
+	cout<<"===PROGRAM POLA SEGITIGA==="<<endl;
+	cout<<"==========================="<<endl;
+
+	cout<<"Pilihlah program yang diinginkan"<<endl;
+
+	cout<<"1. Program segitiga pascal!"<<endl;
+	cout<<"2. Program segitiga ganjil!"<<endl;
+	cout<<"3. Program segitiga genap!"<<endl;
+	cin>>opsi;
+
+	system("cls");
+	switch(int(opsi))
+	{
+		case 1:
+		{
+			cout<<"1. Program segitiga pascal!"<<endl;
+			cout<<"Masukan tinggi segitiga yang diinginkan! :"; cin>>x;
+
+			for(i=0;i<x;++i)
+			{
+				for (a=x;a>=i;--a)
+					{
+						cout<< " ";
+					}
+				for	(b=0;b<=i;++b)
+					{
+						if (b==0)
+						{
+							p=1;
+						}
+						else
+						{
+							p=p*(i-1-b)/b;
+						}
+					cout<<" ";
+					cout<<p;
+					cout<<"";
+
+					}
+					cout<<endl;
+
+
+			}
+			break;
+		}
+
+		case 2:
+		{
+			cout<<"2. Program segitiga ganjil"<<endl;
+			cout<<"Masukan tinggi segitiga yang diinginkan! :"; cin>>x;
+
+			for (i=1;i<=x;++i)
+				{
+					for(a=x;a>=i;--a)
+					{
+						cout<<" ";
+					}
+					for (b=1;b<=i+(i-1);++b)
+					{
+						cout<<"^";
+
+					}
+					cout<<endl;
+				}
+				break;
+		}
+
+		case 3:
+		{
+			cout<<"3. Program segitiga genap!"<<endl;
+			cout<<"Masukan tinggi segitiga yang diinginkan! :"; cin>>x;
+
+			for (i=1;i<=x;++i)
+				{
+					for(a=x;a>=i;--a)
+					{
+						cout<<" ";
+					}
+					for (b=1;b<=i+i;++b)
+					{
+						cout<<"^";
+					}
+					cout<<endl;
+				}
+				break;
+		}
+		
+		default :
+     	{
+               cout<<"Maaf anda melakukan kesalahan!!!!"<<endl;
+     	}
+ 	}
+	cout<<"apakah anda ingin mengulang program?(y/n) :"; cin>>ulang;
+
+	}
+
+}
+
+

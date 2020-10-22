@@ -1,0 +1,101 @@
+#include <iostream>
+#include <cstdlib>
+#include <windows.h>
+#include<math.h>
+using namespace std;
+int main (int argc,char*argv){
+    int a; // untuk nilai bilangan pertama
+    int b; // untuk nilai bilangan kedua
+    int x; // untuk pengecekan FPB
+    int kpk = 0; // nilai awal KPK untuk pengecekan
+    int z; // untuk menu pilihan switch case
+	char lanjut='y';
+
+
+
+    while(lanjut=='y'){
+
+	cout<<"1. Menentukan nilai KPK"<<endl;
+    cout<<"2. Menentukan nilai FPB"<<endl;
+    cout<<"3. Mencari nilai perkalian"<<endl;
+    cout<<"4. Mencari nilai perpangkatan"<<endl;
+
+    cout<<"Masukkan Pilihan Anda:";cin>>z;
+    system("cls");
+    switch (z)
+    {
+        case 1 :
+            {
+                cout<<"\n Mencari nilai KPK"<<endl;
+
+        		cout<<"masukkan bilangan pertama : ";cin>>a;
+                cout<<"masukkan bilangan kedua   : ";cin>>b;
+                cout<<endl;
+
+                for(int i=1;i<=b;i++)
+                {
+                    kpk=kpk+a;
+                    if(kpk%b==0)
+                    {
+                        cout<<"\n KPK yang didapat adalah : "<<kpk<<endl;
+                        break;
+                    }
+                }
+                break;
+            }
+
+        case 2 :
+            {
+                cout<<"\n Mencari nilai FPB"<<endl;
+                cout<<"masukkan bilangan pertama : ";cin>>a;
+                cout<<"masukkan bilangan kedua   : ";cin>>b;
+
+                x=a%b;
+                while (x!=0)
+                {
+                    a=b;
+                    b=x;
+                    x=a%b;                 }
+                cout<<"\n FPB yang didapat adalah :"<<b<<endl;
+                break;
+            }
+
+     	case 3 :
+     		{
+     			int perk;
+     			cout<<"Kalkulator perkalian sederhana"<<endl;
+     			cout<<"masukkan bilangan pertama : ";cin>>a;
+                cout<<"masukkan bilangan kedua   : ";cin>>b;
+
+            	perk=a*b;
+
+            	cout<<"Hasil perkalian adalah: "<<perk<<endl;
+            	break;
+
+			 }
+     	case 4:
+     		{
+     			int p,q,pangkat;
+     			cout<<"----Mencari hasil perpangkatan----"<<endl;
+
+     			cout<<"Masukan bilangan p :"<<endl; cin>>p;
+     			cout<<"Masukan bilangan q :"<<endl; cin>>q;
+     			pangkat=pow(p,q);
+     			cout<<"Hasil perpangkatan adalah :"<<pangkat<<endl;
+     			break;
+
+			 }
+
+        default :
+            {
+                cout<<"Maaf anda melakukan kesalahan!!!!"<<endl;
+            }
+    }
+
+    cout<<"Ingin menghitung lagi (y/n)? ";
+    cin >>lanjut;
+    cout<<endl;
+
+}
+
+}

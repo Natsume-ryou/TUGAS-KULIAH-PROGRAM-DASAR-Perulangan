@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+    int n,total,powers;
+    char ulang='y';
+    while (ulang=='y')
+    {
+    	
+    	cout<<"============================================="<<endl;
+        cout<<"Program ini bertujuan menghitung hasil '2^n'!"<<endl;
+        cout<<"============================================="<<endl;
+        cout<<"Masukan nilai n :";
+        cin>>n;
+
+        total=2;
+		
+        for(powers=0;powers<n;powers++)
+         {
+          total*=2;
+          cout<<"Hasil dari pangkat! :"<<total<<endl;
+
+         }
+        cout<<"Apakah ingin mengulang program?(y/n)"; cin>>ulang;
+	}
+}
